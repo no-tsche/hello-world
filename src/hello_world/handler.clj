@@ -9,8 +9,7 @@
 
   (GET "/user/:id{[0-9]+}" [id] (html [:h2 "Привет, пользователь №" id]))
 
-  (route/not-found "404 Не нашли."))
-
+  (route/not-found (html [:h3 "404 Не нашли."])))
 
 (def app
   (wrap-defaults app-routes site-defaults))
